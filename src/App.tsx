@@ -1,6 +1,14 @@
+import { ThemeProvider } from "@/components/theme-provider";
+import DashboardLayout from "./layouts/DashboardLayout";
 
 function App() {
-  return <div>Hello Aviara</div>;
+  return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <DashboardLayout>
+        <div className="flex items-center justify-center">Hello Aviara</div>
+      </DashboardLayout>
+    </ThemeProvider>
+  );
 }
 
 export default App;
