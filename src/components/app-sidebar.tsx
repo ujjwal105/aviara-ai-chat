@@ -17,6 +17,7 @@ import {
   Cpu,
   TrendingUp,
   Star,
+  Plus,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -43,31 +44,31 @@ const data = {
   },
   navMain: [
     {
-      title: "Home",
+      title: "New Chat",
       url: "/dashboard",
-      icon: Home,
+      icon: Plus,
       isActive: true,
     },
-    {
-      title: "Trending",
-      url: "#",
-      icon: TrendingUp,
-    },
-    {
-      title: "Add Prompts",
-      url: "/dashboard/prompts",
-      icon: FileText,
-    },
-    {
-      title: "Favorites",
-      url: "#",
-      icon: Star,
-    },
-    {
-      title: "Settings",
-      url: "/dashboard/settings",
-      icon: Settings2,
-    },
+    // {
+    //   title: "Trending",
+    //   url: "#",
+    //   icon: TrendingUp,
+    // },
+    // {
+    //   title: "Add Prompts",
+    //   url: "/dashboard/prompts",
+    //   icon: FileText,
+    // },
+    // {
+    //   title: "Favorites",
+    //   url: "#",
+    //   icon: Star,
+    // },
+    // {
+    //   title: "Settings",
+    //   url: "/dashboard/settings",
+    //   icon: Settings2,
+    // },
   ],
   navSecondary: [
     {
@@ -117,36 +118,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 }`}
               >
                 <div className=" text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                    <defs>
-                      <linearGradient
-                        id="eyeGradient"
-                        x1="0"
-                        x2="1"
-                        y1="0.0945"
-                        y2="0.9055"
-                      >
-                        <stop
-                          offset="0"
-                          stop-color="#01DD85"
-                          stop-opacity="1"
-                        />
-                        <stop
-                          offset="1"
-                          stop-color="rgb(89, 233, 218)"
-                          stop-opacity="1"
-                        />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M 0 32 L 0 0 L 32 0 L 32 32 Z"
-                      fill="transparent"
-                    />
-                    <path
-                      d="M 31.763 15.331 C 31.445 14.937 23.882 5.705 16 5.705 C 8.118 5.705 0.555 14.937 0.237 15.331 C 0.084 15.52 0 15.756 0 16 C 0 16.244 0.084 16.48 0.237 16.67 C 0.555 17.063 8.118 26.294 16 26.294 C 23.882 26.294 31.445 17.063 31.763 16.67 C 31.916 16.48 32 16.244 32 16 C 32 15.756 31.916 15.52 31.763 15.331 Z M 8.966 12.784 C 8.966 11.66 9.88 10.746 11.004 10.746 C 12.128 10.746 13.043 11.66 13.043 12.784 C 13.043 13.908 12.128 14.823 11.004 14.823 C 9.88 14.823 8.966 13.908 8.966 12.784 Z M 16 21.469 C 13.302 21.469 11.056 19.505 10.612 16.932 C 13.055 17.162 15.171 15.235 15.171 12.784 C 15.171 12.777 15.171 12.771 15.171 12.764 C 15.168 12.042 14.976 11.334 14.615 10.709 C 15.067 10.59 15.533 10.531 16 10.531 C 19.016 10.531 21.469 12.984 21.469 16 C 21.469 19.016 19.016 21.469 16 21.469 Z"
-                      fill="url(#eyeGradient)"
-                    />
-                  </svg>
+                  <img src="/src/assets/logo.svg" alt="Aviara AI Logo" />
                 </div>
                 {state !== "collapsed" && (
                   <div className="grid flex-1 text-left text-sm leading-tight ml-2">
@@ -162,7 +134,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        {/* <NavMain items={data.navMain} /> */}
+        <NavMain items={data.navMain} />
         {/* <NavProjects projects={data.projects} /> */}
         {/* <NavSecondary items={data.navSecondary} className="mt-auto -mb-2" /> */}
       </SidebarContent>
