@@ -28,7 +28,7 @@ const data = {
   navMain: [
     {
       title: "New Chat",
-      url: "/dashboard",
+      url: "/",
       icon: Plus,
       isActive: true,
     },
