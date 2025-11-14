@@ -1,24 +1,7 @@
 "use client";
 
 import * as React from "react";
-import {
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  LifeBuoy,
-  Map,
-  PieChart,
-  Send,
-  Settings2,
-  SquareTerminal,
-  Home,
-  FileText,
-  Cpu,
-  TrendingUp,
-  Star,
-  Plus,
-} from "lucide-react";
+import { LifeBuoy, Send, Plus } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import { NavProjects } from "@/components/nav-projects";
@@ -49,26 +32,6 @@ const data = {
       icon: Plus,
       isActive: true,
     },
-    // {
-    //   title: "Trending",
-    //   url: "#",
-    //   icon: TrendingUp,
-    // },
-    // {
-    //   title: "Add Prompts",
-    //   url: "/dashboard/prompts",
-    //   icon: FileText,
-    // },
-    // {
-    //   title: "Favorites",
-    //   url: "#",
-    //   icon: Star,
-    // },
-    // {
-    //   title: "Settings",
-    //   url: "/dashboard/settings",
-    //   icon: Settings2,
-    // },
   ],
   navSecondary: [
     {
@@ -82,23 +45,6 @@ const data = {
       icon: Send,
     },
   ],
-  // projects: [
-  //   {
-  //     name: "AI Assistant",
-  //     url: "#",
-  //     icon: Bot,
-  //   },
-  //   {
-  //     name: "Content Generation",
-  //     url: "#",
-  //     icon: PieChart,
-  //   },
-  //   {
-  //     name: "Data Analysis",
-  //     url: "#",
-  //     icon: Frame,
-  //   },
-  // ],
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
